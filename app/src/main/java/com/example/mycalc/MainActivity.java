@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView result;
-    private Button num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_0,plus,minus,evenly,AC;
+    private Button num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_0,plus,minus,evenly,AC,zap;
     private double numCurrent, numLast = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         result = findViewById(R.id.result);
-
         initializeButton();
         numberListener();
         actionListener();
@@ -41,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
         evenly = findViewById(R.id.evenly);
+        zap = findViewById(R.id.zap);
     }
 
     public void numberListener() {
@@ -112,6 +112,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 result.setText(result.getText() + "9");
+            }
+        });
+        zap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                result.setText(result.getText() + ".");
             }
         });
     }
