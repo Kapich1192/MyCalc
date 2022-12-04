@@ -9,18 +9,25 @@ public class Calc {
     private boolean action = false;
     private String temp = "";
     private boolean sc = false;
+    private String history = "";
     //constructors
 
     public Calc() {
     }
 
     //getters
+    public String getHistory() {
+        return history;
+    }
+
     public boolean getSc(){
         return sc;
     }
+
     public String getTemp() {
         return temp;
     }
+
     public String getBaseVal() {
         return baseVal;
     }
@@ -42,6 +49,9 @@ public class Calc {
     }
 
     //setters
+    public void setHistory(String history) {
+        this.history = history;
+    }
 
     public void setTemp(String temp) {
         this.temp = temp;
@@ -71,6 +81,11 @@ public class Calc {
         this.sc=sc;
     }
     //methods
+    public void evenly() {
+        currentNum = Double.parseDouble(result);
+        storePars("");
+        result = "" + calculate();
+    }
 
     public void ac() {
         result = "0";
@@ -78,21 +93,70 @@ public class Calc {
         sc = false;
         currentNum = 0;
         lastNum = 0;
+        history = "";
     }
 
-    public void sum() {
-
-      currentNum = Double.parseDouble(result);
-      result = "" + (currentNum + lastNum);
-      currentNum = Double.parseDouble(result);
-      lastNum = currentNum;
+    public void plus() {
+        currentNum = Double.parseDouble(result);
+        storePars("+");
+        result = "0";
+        sc = false;
     }
 
     public void minus() {
         currentNum = Double.parseDouble(result);
-        result = "" + ( lastNum - currentNum);
+        storePars("-");
+        result = "0";
+        sc = false;
+    }
+
+    public void division() {
         currentNum = Double.parseDouble(result);
-        lastNum = currentNum;
+        storePars("/");
+        result = "0";
+        sc = false;
+    }
+
+    public void multiplier() {
+        currentNum = Double.parseDouble(result);
+        storePars("*");
+        result = "0";
+        sc = false;
+    }
+
+    public void sign() {
+        currentNum = Double.parseDouble(result);
+        currentNum = currentNum * -1;
+        out();
+    }
+//================================== private
+    private void storePars(String s) {
+        history += " " + currentNum + " " + s;
+    }
+    private void out() {
+        if (currentNum - (long)currentNum == 0)
+            result = "" + (long)(currentNum);
+        else
+            result = "" + (currentNum);
+    }
+    private double calculate() {
+
+        String list[] = history.split(" ");
+        double result = Double.parseDouble(list[1]);
+        System.out.println("----->" + result);
+        for (int i = 1; i < list.length; i++) {
+            if (list[i].equals("*")) {
+                result *=  Double.parseDouble(list[i + 1]);
+            } else if (list[i].equals("/")){
+                result /= Double.parseDouble(list[i + 1]);
+            } else if (list[i].equals("+")){
+                result += Double.parseDouble(list[i + 1]);
+                //System.out.println(" " + list[i - 1] + " / " + list[i + 1]);
+            } else if (list[i].equals("-")){
+                result -= Double.parseDouble(list[i + 1]);
+            }
+        }
+        return result;
     }
 
 }

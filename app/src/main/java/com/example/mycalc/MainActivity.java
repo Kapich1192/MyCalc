@@ -10,24 +10,28 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     boolean action = false;
     double a = 0, b = 0, c = 0;
-    private TextView result;
-    private Button num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_0,plus,minus,evenly,AC,zap;
+    private TextView result, history;
+    private Button num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_0,
+            plus,minus,evenly,AC, sign,multiplier, division,
+            MR,MM,MP,MC, left_s,right_s
+            ;
     private double numCurrent, numLast = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Calc calc = new Calc();
-
         initializeViews();
         result.setText(calc.getResult());
         listenAction(calc);
     }
 
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
     public void initializeViews() {
         result = findViewById(R.id.result);
-        AC = findViewById(R.id.AC);
+        history = findViewById(R.id.history);
+
         num_0 = findViewById(R.id.num_0);
         num_1 = findViewById(R.id.num_1);
         num_2 = findViewById(R.id.num_2);
@@ -38,24 +42,58 @@ public class MainActivity extends AppCompatActivity {
         num_7 = findViewById(R.id.num_7);
         num_8 = findViewById(R.id.num_8);
         num_9 = findViewById(R.id.num_9);
+
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
+        division = findViewById(R.id.division);
+        multiplier = findViewById(R.id.multiplier);
         evenly = findViewById(R.id.evenly);
-        zap = findViewById(R.id.zap);
+
+        sign = findViewById(R.id.sign);
+        AC = findViewById(R.id.AC);
     }
+
     public void listenAction(Calc calc) {
        clickNumber(calc);
        clickStdAction(calc);
        clickMathAction(calc);
        //clickTrigAction();
     }
+
     public void clickMathAction(Calc calc) {
+        evenly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calc.evenly();
+                result.setText(calc.getResult());
+                history.setText(calc.getHistory());
+                calc.ac();
+            }
+        });
+        multiplier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calc.multiplier();
+                result.setText(calc.getResult());
+                history.setText(calc.getHistory());
+            }
+        });
+
+        division.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calc.division();
+                result.setText(calc.getResult());
+                history.setText(calc.getHistory());
+            }
+        });
+
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calc.sum();
+                calc.plus();
                 result.setText(calc.getResult());
-                calc.setSc(false);
+                history.setText(calc.getHistory());
             }
         });
 
@@ -64,16 +102,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.minus();
                 result.setText(calc.getResult());
-                calc.setSc(false);
+                history.setText(calc.getHistory());
+            }
+        });
+
+        sign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calc.sign();
+                result.setText(calc.getResult());
             }
         });
     }
+
     public void clickStdAction(Calc calc) {
         AC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calc.ac();
                 result.setText(calc.getResult());
+                history.setText(calc.getHistory());
             }
         });
     }

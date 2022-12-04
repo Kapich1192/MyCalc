@@ -23,11 +23,19 @@
             android:layout_height="0dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="3"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/result"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/result"
@@ -135,7 +143,7 @@
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/button30"
+                android:id="@+id/sign"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
@@ -161,7 +169,7 @@
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/button32"
+                android:id="@+id/division"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
@@ -303,7 +311,7 @@
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/button33"
+                android:id="@+id/multiplier"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
