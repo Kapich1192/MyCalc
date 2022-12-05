@@ -2,6 +2,7 @@ package com.example.mycalc;
 
 public class Calc {
     //fields
+
     private String baseVal = "0";
     private double currentNum = 0;
     private double lastNum = 0;
@@ -10,12 +11,14 @@ public class Calc {
     private String temp = "";
     private boolean sc = false;
     private String history = "";
+
     //constructors
 
     public Calc() {
     }
 
     //getters
+
     public String getHistory() {
         return history;
     }
@@ -49,6 +52,7 @@ public class Calc {
     }
 
     //setters
+
     public void setHistory(String history) {
         this.history = history;
     }
@@ -78,11 +82,15 @@ public class Calc {
     }
 
     public void setSc(boolean sc) {
-        this.sc=sc;
+        this.sc = sc;
     }
+
     //methods
+    //================================== actions ==================================================
+
     public void evenly() {
         currentNum = Double.parseDouble(result);
+       // history += result;
         storePars("");
         result = "" + calculate();
     }
@@ -129,21 +137,106 @@ public class Calc {
         currentNum = currentNum * -1;
         out();
     }
-//================================== private
+
+    public void factorial() {
+        currentNum = Double.parseDouble(result);
+        storePars("!");
+        result = "0";
+        sc = false;
+    }
+
+    public void pow() {
+        currentNum = Double.parseDouble(result);
+        storePars("pow");
+        result = "0";
+        sc = false;
+    }
+
+    public void sqrt() {
+        currentNum = Double.parseDouble(result);
+        storePars("sqrt");
+        result = "0";
+        sc = false;
+    }
+
+    public void fmod() {
+        currentNum = Double.parseDouble(result);
+        storePars("fmod");
+        result = "0";
+        sc = false;
+    }
+
+    public void floor() {
+        currentNum = Double.parseDouble(result);
+        storePars("floor");
+        result = "0";
+        sc = false;
+    }
+
+    public void ceil() {
+        currentNum = Double.parseDouble(result);
+        storePars("ceil");
+        result = "0";
+        sc = false;
+    }
+
+    public void log() {
+        currentNum = Double.parseDouble(result);
+        storePars("log");
+        result = "0";
+        sc = false;
+    }
+
+    public void exp() {
+        currentNum = Double.parseDouble(result);
+        storePars("exp");
+        result = "0";
+        sc = false;
+    }
+
+    public void percent() {
+        currentNum = Double.parseDouble(result);
+        storePars("percent");
+        result = "0";
+        sc = false;
+    }
+
+    public void sin() {
+        currentNum = Double.parseDouble(result);
+        storePars("sin");
+        result = "0";
+        sc = false;
+    }
+
+    public void cos() {
+        currentNum = Double.parseDouble(result);
+        storePars("cos");
+        result = "0";
+        sc = false;
+    }
+
+    public void tan() {
+        currentNum = Double.parseDouble(result);
+        storePars("tan");
+        result = "0";
+        sc = false;
+    }
+//================================== private methods ==============================================
+
     private void storePars(String s) {
         history += " " + currentNum + " " + s;
     }
+
     private void out() {
         if (currentNum - (long)currentNum == 0)
             result = "" + (long)(currentNum);
         else
             result = "" + (currentNum);
     }
-    private double calculate() {
 
+    private double calculate() {
         String list[] = history.split(" ");
         double result = Double.parseDouble(list[1]);
-        System.out.println("----->" + result);
         for (int i = 1; i < list.length; i++) {
             if (list[i].equals("*")) {
                 result *=  Double.parseDouble(list[i + 1]);
@@ -151,12 +244,41 @@ public class Calc {
                 result /= Double.parseDouble(list[i + 1]);
             } else if (list[i].equals("+")){
                 result += Double.parseDouble(list[i + 1]);
-                //System.out.println(" " + list[i - 1] + " / " + list[i + 1]);
             } else if (list[i].equals("-")){
                 result -= Double.parseDouble(list[i + 1]);
+            } else if (list[i].equals("!")) {
+                result = fact(result);
+            } else if (list[i].equals("pow")) {
+                result = Math.pow(result,Double.parseDouble(list[i+1]));
+            } else if (list[i].equals("sqrt")) {
+                result = Math.sqrt(result);
+            } else if (list[i].equals("fmod")) {
+                result = result % Double.parseDouble(list[i+1]);
+            } else if (list[i].equals("percent")) {
+                result = result / 100 * Double.parseDouble(list[i + 1]);
+            } else if (list[i].equals("sin")) {
+                result = Math.sin(result);
+            } else if (list[i].equals("cos")) {
+                result = Math.cos(result);
+            } else if (list[i].equals("tan")) {
+                result = Math.tan(result);
+            } else if (list[i].equals("log")) {
+                result = Math.log(result);
+            } else if(list[i].equals("floor")) {
+                result = Math.floor(result);
+            } else if (list[i].equals("ceil")) {
+                result = Math.ceil(result);
+            } else if (list[i].equals("exp") ) {
+                result = Math.exp(result);
             }
         }
         return result;
+    }
+
+    private double fact(double num) {
+        if(num <= 0 ) return 1;
+        if(num == 1) return 1;
+        return fact(num - 1) * num;
     }
 
 }

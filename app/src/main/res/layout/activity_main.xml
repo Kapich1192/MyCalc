@@ -319,14 +319,14 @@
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
-                android:id="@+id/zap"
+                android:id="@+id/dote"
                 android:layout_width="wrap_content"
                 android:layout_height="100sp"
                 android:layout_marginStart="10sp"
                 android:layout_marginEnd="10sp"
                 android:layout_weight="2"
                 android:backgroundTint="@color/number_button"
-                android:text=","
+                android:text="."
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:cornerRadius="50sp" />

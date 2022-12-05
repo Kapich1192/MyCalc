@@ -51,81 +51,17 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/right_s"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="("
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/left_s"
+                android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text=")"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/MC"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="mc"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/MP"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="m+"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/MM"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="m-"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/MR"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="mr"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/an_button"
+                android:text="back"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
@@ -156,7 +92,7 @@
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/button31"
+                android:id="@+id/percent"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
@@ -192,79 +128,40 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/nd2"
+                android:id="@+id/sin"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="2nd"
+                android:text="sin"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/pow_2"
+                android:id="@+id/cos"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="x2"
+                android:text="cos"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/pow_3"
+                android:id="@+id/tan"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="x3"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/pow_y"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="xy"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/e_x"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="ex"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/x_10"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="10x"
+                android:text="tan"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
@@ -332,80 +229,42 @@
             android:layout_marginBottom="5dp"
             android:layout_weight="2"
             android:orientation="horizontal">
+
             <Button
-                android:id="@+id/x_sq"
+                android:id="@+id/pi"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="1/x"
+                android:text="pi"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/sq_2"
+                android:id="@+id/log"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="2x"
+                android:text="log"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/sq_3"
+                android:id="@+id/ex"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="3x"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/sq_y"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="yx"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/ln"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="ln"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/log_10"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="l10"
+                android:text="ex"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
@@ -474,7 +333,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/fact_x"
+                android:id="@+id/factorial"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
@@ -487,66 +346,26 @@
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/sin_x"
+                android:id="@+id/pow"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="sin"
+                android:text="pow"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
-
             <Button
-                android:id="@+id/cos_x"
+                android:id="@+id/sqrt"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="cos"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/tan_x"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="tan"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/e"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="e"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
-
-            <Button
-                android:id="@+id/EE"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="EE"
+                android:text="sqrt"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
@@ -612,83 +431,52 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
+
+
+
             <Button
-                android:id="@+id/Rad"
+                android:id="@+id/floor"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="Rad"
+                android:text="floor"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:cornerRadius="50sp" />
+            <Button
+                android:id="@+id/ceil"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/anover_button"
+                android:text="ceil"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
             <Button
-                android:id="@+id/sinh"
+                android:id="@+id/fmod"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/anover_button"
-                android:text="sinh"
+                android:text="fmod"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
 
-            <Button
-                android:id="@+id/cosh"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="cosh"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
 
-            <Button
-                android:id="@+id/tanh"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="tanh"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
 
-            <Button
-                android:id="@+id/Pi"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="PI"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
 
-            <Button
-                android:id="@+id/Rand"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/anover_button"
-                android:text="Rand"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="50sp" />
+
+
 
             <Button
                 android:id="@+id/num_0"
@@ -706,14 +494,14 @@
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
-                android:id="@+id/zap"
+                android:id="@+id/dote"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_marginStart="5sp"
                 android:layout_marginEnd="5sp"
                 android:layout_weight="2"
                 android:backgroundTint="@color/number_button"
-                android:text=","
+                android:text="."
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:cornerRadius="50sp" />
