@@ -3,10 +3,10 @@
 Моя версия калькулятора с расширенным функционалом для андроид с приятным лаконичным дизайном
 
 # Реализованы функции:
-#    plus
-#    minus
-#    division
-#   multiplier
-#    sing
-#    ac
+<p><br>    plus</p>
+ <p><br>   minus</p>
+<p><br>    division</p>
+<p><br>    multiplier</p>
+<p><br>    sing</p>
+<p><br>    ac</p>
 # Функции в планах:
