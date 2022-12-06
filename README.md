@@ -6,13 +6,13 @@
 
 <h3>Системные</h3>
 
-<p><br>    <strong>ac()</strong> - </p>
+<p><br>    <strong>ac()</strong> - сброс к начальному состоянию</p>
 
-<p><br>    <strong>back()</strong> - </p>
+<p><br>    <strong>back()</strong> - удаление текущего символа</p>
 
-<p><br>    <strong>sing()</strong> - </p>
+<p><br>    <strong>sing()</strong> - смена знака числа</p>
 
-<p><br>    <strong>percent()</strong> - </p>
+<p><br>    <strong>percent()</strong> - взятие процента</p>
 
 <h3>Арифметические</h3>
 
