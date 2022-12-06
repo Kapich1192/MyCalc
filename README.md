@@ -12,15 +12,15 @@
 
 <p><br>    <strong>plus()</strong> - сложение</p>
 
- <p><br>   minus</p>
+ <p><br>   <strong>minus()</strong> - </p>
  
-<p><br>    division</p>
+<p><br>    <strong>division()</strong> - </p>
 
-<p><br>    multiplier</p>
+<p><br>    <strong>multiplier()</strong> - </p>
 
-<p><br>    my_fmod</p>
+<p><br>    <strong>fmod()</strong> - </p>
 
-<p><br>    sing</p>
+<p><br>    <strong>sing()</strong> - </p>
 
 <h3>Тригонометрия</h3>
 
