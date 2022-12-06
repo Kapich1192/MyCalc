@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    boolean action = false;
-    double a = 0, b = 0, c = 0;
-    private TextView result, history;
+    private TextView result;
     private Button num_1,num_2,num_3,num_4,num_5,num_6,num_7,num_8,num_9,num_0,
             plus,minus,evenly, sign,multiplier, division, factorial, pow, sqrt, fmod, log, ex,
             sin, cos, tan, pi, floor, ceil,
@@ -43,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++*/
     public void initializeViews() {
         result = findViewById(R.id.result);
-        history = findViewById(R.id.history);
 
         num_0 = findViewById(R.id.num_0);
         num_1 = findViewById(R.id.num_1);
@@ -102,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.sin();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -111,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.cos();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -120,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.tan();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -129,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.log();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -138,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.exp();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
     }
@@ -150,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.floor();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -159,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.ceil();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -168,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.fmod();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -177,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.sqrt();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -186,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.pow();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -195,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.factorial();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -204,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.evenly();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
                 calc.ac();
             }
         });
@@ -214,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.multiplier();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -223,7 +207,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.division();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -232,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.plus();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -241,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.minus();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -262,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.ac();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
+
             }
         });
 
@@ -286,7 +267,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.percent();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -657,7 +637,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.ac();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
+            }
+        });
+
+        percent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calc.percent();
+                result.setText(calc.getResult());
             }
         });
 
@@ -670,7 +657,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.evenly();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
                 calc.ac();
             }
         });
@@ -680,7 +666,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.multiplier();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -689,7 +674,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.division();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -698,7 +682,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.plus();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
@@ -707,7 +690,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 calc.minus();
                 result.setText(calc.getResult());
-                history.setText(calc.getHistory());
             }
         });
 
